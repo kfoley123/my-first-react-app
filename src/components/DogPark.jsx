@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ColorButton } from "./ColorButton";
 
 import { Controls } from "./Controls";
 
@@ -11,13 +12,16 @@ const DogPark = () => {
 
     return (
         <>
-            <Controls dogWhistle={setList} dogs={list} />
+            <Controls dogWhistle={setList} dogs={list} cats={"test"} />
+
             {console.log(2)}
             <ul>
                 {list.map((dog, index) => {
                     return <Dog breed={dog} key={index} />;
                 })}
             </ul>
+            <ColorButton text={"color"} />
+            <ColorButton text={"blue"} />
         </>
     );
 };
